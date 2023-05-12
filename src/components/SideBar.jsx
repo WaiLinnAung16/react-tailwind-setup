@@ -1,9 +1,10 @@
 import React from "react";
+import SideNav from "./SideNav";
 
 const SideBar = () => {
   return (
-    <div className="col-span-2 h-screen bg-slate-300">
-      <div className="flex flex-col items-center"></div>
+    <div className="col-span-2 bg-slate-50  min-h-screen">
+      <SideNav />
     </div>
   );
 };
