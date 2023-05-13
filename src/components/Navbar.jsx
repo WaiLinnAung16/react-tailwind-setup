@@ -6,7 +6,7 @@ import { BiBookContent, BiChevronRight } from "react-icons/bi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 const Navbar = () => {
   return (
-    <div className="grid grid-cols-12 items-center py-3 px-5 bg-slate-50 sticky top-0 shadow-md">
+    <div className="grid grid-cols-12 items-center py-3 px-5 bg-slate-50 sticky top-0 shadow-md z-50">
       <div className="col-span-2 flex items-center gap-1 text-2xl">
         <BiBookContent />
         <h1 className="font-bold tracking-wide">BLOGMAKER</h1>

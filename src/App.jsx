@@ -1,10 +1,15 @@
 import React from "react";
 import Path from "./routes/Path";
-
+import SideBar from "./components/SideBar";
+import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <div>
-      <Path />
+      <Navbar />
+      <div className="flex">
+        <SideBar />
+        <Path />
+      </div>
     </div>
   );
 };

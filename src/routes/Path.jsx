@@ -1,16 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "../Pages/Dashboard";
+import Blog from "../Pages/Blog";
+import Team from "../Pages/Team";
 import Home from "../Pages/Home";
 
 const Path = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/team" element={<Team />} />
+    </Routes>
   );
 };
 
