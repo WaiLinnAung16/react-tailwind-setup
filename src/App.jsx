@@ -8,7 +8,9 @@ const App = () => {
       <Navbar />
       <div className="flex">
         <SideBar />
-        <Path />
+        <div className="ml-[440px] p-5 bg-slate-100 h-screen w-full">
+          <Path />
+        </div>
       </div>
     </div>
   );

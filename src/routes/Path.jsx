@@ -8,7 +8,7 @@ import Home from "../Pages/Home";
 const Path = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Dashboard />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/team" element={<Team />} />
     </Routes>
