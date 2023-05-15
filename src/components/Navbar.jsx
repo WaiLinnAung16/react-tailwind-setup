@@ -1,19 +1,20 @@
-import { ActionIcon, Avatar, Menu, TextInput } from "@mantine/core";
-
+import { ActionIcon, Flex, TextInput } from "@mantine/core";
 import React from "react";
 import { BsSearch } from "react-icons/bs";
-import { BiBookContent } from "react-icons/bi";
-import { TbMessageCircle } from "react-icons/tb";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
+import { SlWallet } from "react-icons/sl";
+import Profile from "./Profile";
+
 const Navbar = () => {
   return (
-    <div className="grid grid-cols-12 items-center py-3 px-5 bg-[#fff] sticky top-0 shadow-md z-50">
-      <div className="col-span-2 flex items-center gap-1 text-2xl">
-        <BiBookContent />
-        <h1 className="font-bold tracking-wide">BLOGMAKER</h1>
+    <div className="grid grid-cols-12 items-center py-3 px-10 bg-[#fff] sticky top-0 shadow-md z-50">
+      <div className="col-span-2">
+        <Flex align="center" gap="sm">
+          <SlWallet className="text-xl" />
+          <h1 className="font-bold tracking-wide text-2xl">PayPen</h1>
+        </Flex>
       </div>
-      <div className="col-span-10 ml-auto flex items-center gap-5">
+      <div className="col-span-10 flex justify-between items-center gap-5">
         <TextInput
           size="md"
           className="w-[400px]"
@@ -25,10 +26,10 @@ const Navbar = () => {
           placeholder="Search questions"
           rightSectionWidth={42}
         />
-
-        <IoMdNotificationsOutline className="text-3xl" />
-        <TbMessageCircle className="text-3xl" />
-        <CgProfile className="text-3xl" />
+        <div className="flex items-center gap-5">
+          <IoMdNotificationsOutline className="text-3xl" />
+          <Profile />
+        </div>
       </div>
     </div>
   );
