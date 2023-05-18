@@ -15,7 +15,7 @@ const Dashboard = () => {
         <Card icon={<AiFillInstagram />} num="156k" />
         <Card icon={<FaYoutube />} num="270k" />
       </div>
-      <div>
+      <div className="h-[600px]">
         <Chart />
       </div>
     </div>
