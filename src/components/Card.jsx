@@ -1,15 +1,16 @@
 import React from "react";
-import { AiOutlineStock } from "react-icons/ai";
-const Card = () => {
+import { BsThreeDots } from "react-icons/bs";
+const Card = (props) => {
   return (
-    <div className="bg-slate-800 text-white rounded-md p-5 col-span-2">
-      <div className="flex items-center gap-5">
-        <AiOutlineStock className="text-5xl" />
+    <div className="border border-slate-900 text-slate-900 rounded-md p-10 col-span-3 relative cursor-pointer transition-all duration-500 hover:bg-slate-200">
+      <div className="flex items-center gap-8">
+        <div className="text-5xl">{props.icon}</div>
         <div>
-          <h1 className="text-xl mb-1">Blog Reaches</h1>
-          <p className="text-lg">20,330</p>
+          <h1 className="text-sm mb-2">Follower</h1>
+          <p className="text-5xl">{props.num}</p>
         </div>
       </div>
+      <BsThreeDots className="absolute top-3 right-5 text-2xl transition-all duration-500 hover:scale-125" />
     </div>
   );
 };
