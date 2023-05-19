@@ -4,18 +4,18 @@ import {
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
@@ -25,49 +25,62 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: "top",
+      position: "bottom",
+      labels: {
+        usePointStyle: true,
+      },
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "Monthly Follower",
     },
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "October",
+  "November",
+  "December",
+];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
+      label: "Facebook",
       data: labels.map(() => faker.number.int({ min: 100, max: 1000 })),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      borderColor: "#3b5998",
+      backgroundColor: "#3b5998",
     },
     {
-      label: "Dataset 2",
+      label: "Twitter",
       data: labels.map(() => faker.number.int({ min: 100, max: 1000 })),
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      borderColor: "#00acee",
+      backgroundColor: "#00acee",
     },
     {
-      label: "Dataset 3",
+      label: "Instagram",
       data: labels.map(() => faker.number.int({ min: 100, max: 1000 })),
-
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      borderColor: "#fa7e1e",
+      backgroundColor: "#fa7e1e",
     },
     {
-      label: "Dataset 4",
+      label: "YouTube",
       data: labels.map(() => faker.number.int({ min: 100, max: 1000 })),
-
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      borderColor: "#c4302b",
+      backgroundColor: "#c4302b",
     },
   ],
 };
 
 export function Chart() {
-  return <Line options={options} data={data} />;
+  return <Bar options={options} data={data} />;
 }

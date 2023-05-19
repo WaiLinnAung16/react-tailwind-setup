@@ -45,7 +45,7 @@ export const SideNav = () => {
   ));
 
   return (
-    <Box w={400} mx={"lg"}>
+    <Box w={300} mx={"lg"}>
       <h1 className="text-base font-bold tracking-wide text-[#a2a2a2] mb-3">
         Main Menu
       </h1>

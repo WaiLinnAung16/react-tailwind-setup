@@ -2,7 +2,7 @@ import React from "react";
 import { BsThreeDots } from "react-icons/bs";
 const Card = (props) => {
   return (
-    <div className="border border-slate-900 text-slate-900 rounded-md p-10 col-span-3 relative cursor-pointer transition-all duration-500 hover:bg-slate-200">
+    <div className="shadow-md bg-white text-slate-900 rounded-md p-8 col-span-3 relative cursor-pointer transition-all duration-500 hover:bg-slate-100">
       <div className="flex items-center gap-8">
         <div className="text-5xl">{props.icon}</div>
         <div>
